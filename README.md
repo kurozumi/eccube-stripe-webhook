@@ -48,6 +48,7 @@ use Stripe\Checkout\Session;
 use Stripe\Event;
 use Stripe\Invoice;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
+use Symfony\Component\RemoteEvent\RemoteEvent;
 
 class StripeEventListener implements EventSubscriberInterface
 {

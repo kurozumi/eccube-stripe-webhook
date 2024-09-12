@@ -15,7 +15,7 @@ declare(strict_types=1);
 
 namespace Plugin\StripeWebhook\RemoteEvent\Event;
 
-use Stripe\ApiResource;
+use Stripe\StripeObject;
 use Symfony\Component\RemoteEvent\RemoteEvent;
 
 final class StripeEvent extends RemoteEvent
@@ -24,12 +24,12 @@ final class StripeEvent extends RemoteEvent
         private readonly string $name,
         private readonly string $id,
         private readonly array $payload,
-        private readonly ApiResource $resource
+        private readonly StripeObject $resource
     ) {
         parent::__construct($this->name, $this->id, $this->payload);
     }
 
-    public function getResource(): ApiResource
+    public function getResource(): StripeObject
     {
         return $this->resource;
     }
