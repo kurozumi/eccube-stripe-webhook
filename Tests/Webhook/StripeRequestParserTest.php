@@ -44,7 +44,7 @@ class StripeRequestParserTest extends AbstractRequestParserTestCase
 
     protected function getSecret(): string
     {
-        return getenv('STRIPE_SIGNING_SECRET');
+        return 'STRIPE_SIGNING_SECRET';
     }
 
     protected function createRequest(string $payload): Request
