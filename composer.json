@@ -5,7 +5,7 @@
     "type": "eccube-plugin",
     "require": {
         "ec-cube/plugin-installer": "^2.0",
-        "php": ">=8.1",
+        "php": ">=8.2",
         "symfony/webhook": "*",
         "symfony/remote-event": "*",
         "stripe/stripe-php": "*"
