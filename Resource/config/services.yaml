@@ -1,0 +1,10 @@
+parameters:
+  env(STRIPE_SIGNING_SECRET): ''
+  stripe_signing_secret: '%env(STRIPE_SIGNING_SECRET)%'
+
+framework:
+  webhook:
+    routing:
+      stripe:
+        service: Plugin\StripeWebhook\Webhook\StripeRequestParser
+        secret: '%stripe_signing_secret%'
