@@ -23,11 +23,9 @@ use Symfony\Component\RemoteEvent\RemoteEvent;
 #[AsRemoteEventConsumer(name: 'stripe')]
 class StripeConsumer implements ConsumerInterface
 {
-    private EventDispatcherInterface $eventDispatcher;
-
-    public function __construct(EventDispatcherInterface $eventDispatcher)
+    public function __construct(
+        private readonly EventDispatcherInterface $eventDispatcher)
     {
-        $this->eventDispatcher = $eventDispatcher;
     }
 
     public function consume(RemoteEvent $event): void
